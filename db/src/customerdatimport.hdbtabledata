@@ -1,0 +1,19 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "Customers",
+            "source_data": {
+                "data_type": "CSV",
+                "dialect": "HANA",
+                "file_name": "customerdata.csv",
+                "has_header": true
+            },
+            "column_mappings": {
+                "CustomerNo": "CustomerNo",
+                "FirstName":"FirstName",
+                "LastName":"LastName"
+            }
+        }
+    ]
+}

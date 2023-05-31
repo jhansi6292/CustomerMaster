@@ -1,0 +1,5 @@
+COLUMN TABLE "Customers" (
+    "CustomerNo" NVARCHAR(10),
+    "FirstName" NVARCHAR(20),
+    "LastName" NVARCHAR(20)
+)
