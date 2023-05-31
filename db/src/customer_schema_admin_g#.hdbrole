@@ -1,0 +1,42 @@
+{
+  "role": {
+    "name": "customer_schema_admin_g#",
+    "schema_privileges": [
+      {
+        "reference": "CUSTOMER",
+        "privileges": [
+          "SELECT",
+          "SELECT CDS METADATA",
+          "SELECT METADATA",
+          "EXECUTE",
+          "DEBUG",
+          "ALTER",
+          "CLIENTSIDE ENCRYPTION COLUMN KEY ADMIN",
+          "CREATE ANY",
+          "CREATE TEMPORARY TABLE",
+          "DEBUG MODIFY",
+          "DELETE",
+          "INSERT",
+          "SQLSCRIPT LOGGING",
+          "UPDATE"
+        ],
+        "privileges_with_grant_option": [
+          "SELECT",
+          "SELECT CDS METADATA",
+          "SELECT METADATA",
+          "EXECUTE",
+          "DEBUG",
+          "ALTER",
+          "CLIENTSIDE ENCRYPTION COLUMN KEY ADMIN",
+          "CREATE ANY",
+          "CREATE TEMPORARY TABLE",
+          "DEBUG MODIFY",
+          "DELETE",
+          "INSERT",
+          "SQLSCRIPT LOGGING",
+          "UPDATE"
+        ]
+      }
+    ]
+  }
+}

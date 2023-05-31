@@ -1,0 +1,17 @@
+{
+  "role": {
+    "name": "customer_schema_viewer",
+    "schema_privileges": [
+      {
+        "reference": "CUSTOMER",
+        "privileges": [
+          "SELECT",
+          "SELECT CDS METADATA",
+          "SELECT METADATA",
+          "EXECUTE",
+          "DEBUG"
+        ]
+      }
+    ]
+  }
+}
