@@ -13,8 +13,9 @@ resources:
 - name: hdi_db
   type: com.sap.xs.hdi-container
   parameters:
+    service: hana
     service-name: Customer-hdi
-    service-plan: hana-shared 
+    service-plan: hdi-shared 
     config:
       schema: CUSTOMER
   properties:
