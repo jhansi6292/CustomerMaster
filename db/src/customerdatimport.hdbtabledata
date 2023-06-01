@@ -10,9 +10,9 @@
                 "has_header": true
             },
             "column_mappings": {
-                "CustomerNo": "CustomerNo",
-                "FirstName":"FirstName",
-                "LastName":"LastName"
+                "CUSTOMERNO": "CustomerNo",
+                "FIRSTNAME":"FirstName",
+                "LASTNAME":"LastName"
             }
         }
     ]
