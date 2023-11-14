@@ -1,7 +1,7 @@
 {
   "customer_schema_admin_g#": {
     "CUSTOMER": {
-      "schema": "CUSTOMER_1"
+      "schema": "CUSTOMER"
     }
   }
 }
