@@ -18,5 +18,6 @@ resources:
     service-name: Customer-hdi 
     config:
       schema: CUSTOMER
+      makeUniqueName: false
   properties:
     hdi-container-name: ${service-name}

@@ -7,7 +7,8 @@
                 "data_type": "CSV",
                 "dialect": "HANA",
                 "file_name": "customerdata.csv",
-                "has_header": true
+                "has_header": true,
+                "delete_existing_foreign_data": true
             },
             "column_mappings": {
                 "CUSTOMERNO": "CustomerNo",
