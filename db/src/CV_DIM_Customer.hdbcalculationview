@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_DIM_Customer" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="true">
+<descriptions defaultDescription="CV_DIM_Customer.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="Customers">
+    <resourceUri>Customers</resourceUri>
+  </DataSource>
+  <DataSource id="Address">
+    <resourceUri>Address</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="C1_1" joinType="leftOuter" filterExpressionLanguage="SQL">
+    <viewAttributes>
+      <viewAttribute id="CUSTOMERNO"/>
+      <viewAttribute id="FIRSTNAME"/>
+      <viewAttribute id="LASTNAME"/>
+      <viewAttribute id="ADDRESS_ID"/>
+      <viewAttribute id="STREET"/>
+      <viewAttribute id="STATE"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute hidden="true" id="JOIN$ADDRESS_ID$ADDRESS_ID"/>
+    </viewAttributes>
+    <calculatedViewAttributes>
+      <calculatedViewAttribute id="CC_Customer_full_name" datatype="NVARCHAR" length="110" expressionLanguage="SQL">
+        <formula>&quot;FIRSTNAME&quot;|| ' '||&quot;LASTNAME&quot;</formula>
+      </calculatedViewAttribute>
+    </calculatedViewAttributes>
+    <input node="Customers">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CUSTOMERNO" source="CUSTOMERNO"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="FIRSTNAME" source="FIRSTNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="LASTNAME" source="LASTNAME"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESS_ID" source="ADDRESS_ID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$ADDRESS_ID$ADDRESS_ID" source="ADDRESS_ID"/>
+    </input>
+    <input node="Address">
+      <mapping xsi:type="Calculation:AttributeMapping" target="STREET" source="STREET"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="STATE" source="STATE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY" source="COUNTRY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$ADDRESS_ID$ADDRESS_ID" source="ADDRESS_ID"/>
+    </input>
+    <joinAttribute name="JOIN$ADDRESS_ID$ADDRESS_ID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="CUSTOMER_FULL_NAME" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CC_Customer_full_name"/>
+      <keyMapping columnObjectName="Join_1" columnName="CC_Customer_full_name"/>
+    </attribute>
+  
+    <attribute id="CUSTOMERNO" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUSTOMERNO"/>
+      <keyMapping columnObjectName="Join_1" columnName="CUSTOMERNO"/>
+    </attribute>
+    <attribute id="FIRSTNAME" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FIRSTNAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="FIRSTNAME"/>
+    </attribute>
+    <attribute id="LASTNAME" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LASTNAME"/>
+      <keyMapping columnObjectName="Join_1" columnName="LASTNAME"/>
+    </attribute>
+    <attribute id="ADDRESS_ID" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESS_ID"/>
+      <keyMapping columnObjectName="Join_1" columnName="ADDRESS_ID"/>
+    </attribute>
+    <attribute id="STREET" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STREET"/>
+      <keyMapping columnObjectName="Join_1" columnName="STREET"/>
+    </attribute>
+    <attribute id="STATE" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="STATE"/>
+      <keyMapping columnObjectName="Join_1" columnName="STATE"/>
+    </attribute>
+    <attribute id="COUNTRY" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY"/>
+      <keyMapping columnObjectName="Join_1" columnName="COUNTRY"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Customers" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="165"/>
+    </shape>
+    <shape modelObjectName="Address" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="156"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

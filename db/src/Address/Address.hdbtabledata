@@ -1,0 +1,21 @@
+{
+    "format_version": 1,
+    "imports": [
+        {
+            "target_table": "Address",
+            "source_data": {
+                "data_type": "CSV",
+                "dialect": "HANA",
+                "file_name": "Address.csv",
+                "has_header": true,
+                "delete_existing_foreign_data": true
+            },
+            "column_mappings": {
+                "ADDRESS_ID": "ADDRESS_ID",
+                "STREET":"STREET",
+                "STATE":"STATE",
+                "COUNTRY":"COUNTRY"
+            }
+        }
+    ]
+}

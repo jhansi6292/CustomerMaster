@@ -6,14 +6,15 @@
             "source_data": {
                 "data_type": "CSV",
                 "dialect": "HANA",
-                "file_name": "customerdata.csv",
+                "file_name": "Customer.csv",
                 "has_header": true,
                 "delete_existing_foreign_data": true
             },
             "column_mappings": {
-                "CUSTOMERNO": "CustomerNo",
-                "FIRSTNAME":"FirstName",
-                "LASTNAME":"LastName"
+                "CUSTOMERNO": "CUSTOMERNO",
+                "FIRSTNAME":"FIRSTNAME",
+                "LASTNAME":"LASTNAME",
+                "ADDRESS_ID":"ADDRESS_ID"
             }
         }
     ]
